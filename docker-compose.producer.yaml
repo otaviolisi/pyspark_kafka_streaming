@@ -1,0 +1,15 @@
+services:
+  inventory-python-producer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: inventory-python-producer
+    env_file:
+      - .env
+    networks:
+      - iceberg_iceberg_net
+    restart: unless-stopped
+
+networks:
+  iceberg_iceberg_net:
+    external: true
