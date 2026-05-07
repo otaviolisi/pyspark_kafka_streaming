@@ -20,4 +20,15 @@ class Settings:
     PUBLISHER_SLEEP_SECONDS = int(os.getenv("PUBLISHER_SLEEP_SECONDS", 5))
 
 
+    ICEBERG_CATALOG = os.getenv("ICEBERG_CATALOG", "demo")
+    ICEBERG_REST_URI = os.getenv("ICEBERG_REST_URI")
+    ICEBERG_WAREHOUSE = os.getenv("ICEBERG_WAREHOUSE")
+
+    MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
+    MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
+    MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
+
+    KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS")
+    KAFKA_TOPIC = os.getenv("KAFKA_TOPIC")
+
 settings = Settings()
